@@ -1,0 +1,19 @@
+create database bdempresa;
+use bdempresa;
+
+create table tarjeta(
+ id_tarjeta int(10) primary key auto_increment not null,
+ numeroTarjeta bigint(100),
+ franquicia varchar(50),
+ token bigint(100),
+ fechaCreacion date
+);
+
+create table visitas(
+ id bigint(100) primary key auto_increment not null ,
+ ip_cliente varchar(10000),
+ fecha date,
+ time time,
+ numeroTarjeta bigint(20),
+ numeroTransacciones int(50)
+);
